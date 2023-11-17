@@ -12,6 +12,7 @@ export default function Posts() {
   const [userPosts, setUserPosts] = useState([]);
   const username = useSelector(selectUsername);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchUserPosts = async () => {
@@ -23,7 +24,8 @@ export default function Posts() {
           setUserPosts(response.data);
         }
       } catch (error) {
-        console.error("Error fetching user posts", error);
+        console.error("Error fetching user posts", error.response || error);
+        setError("Error fetching user posts");
       } finally {
         setLoading(false);
       }
@@ -33,8 +35,8 @@ export default function Posts() {
   }, [username]);
 
   return (
-    <main className="bg-purple-500 min-h-screen  flex justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-md w-[80%]  my-10 ">
+    <main className="bg-purple-500 min-h-screen flex justify-center">
+      <div className="bg-white p-8 rounded-lg shadow-md w-[80%] my-10">
         <div className="flex flex-wrap justify-between">
           <h1 className="text-3xl font-bold mb-4 text-purple-800">
             Your Posts
@@ -47,7 +49,11 @@ export default function Posts() {
 
         {loading ? (
           <p className="text-gray-800">Loading...</p>
-        ) : Array.isArray(userPosts.data) && userPosts.data.length > 0 ? (
+        ) : error ? (
+          <div className="flex justify-center items-center ">
+            <p className="text-red-500 text-center">{error}</p>
+          </div>
+        ) : userPosts.data && userPosts.data.length > 0 ? (
           <ul className="list-disc pl-4">
             {userPosts.data.map((post, index) => (
               <li key={index} className="mb-4">
@@ -71,4 +77,4 @@ export default function Posts() {
       </div>
     </main>
   );
-}
+                  }
