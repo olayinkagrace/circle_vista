@@ -1,3 +1,6 @@
+
+
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 
 import { useState } from "react";
@@ -89,7 +92,7 @@ export default function Login() {
         </button>
         {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
         <div className="mt-4 text-center text-sm">
-          Don't have an account?{" "}
+          Don't have an account?
           <Link href="/register" className="text-purple-700 hover:underline">
             Register
           </Link>

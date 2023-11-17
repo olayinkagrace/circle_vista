@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+
 import Link from "next/link";
 import Image from "next/image";
 import error from "../../public/error.png";
@@ -12,7 +14,7 @@ export default function NotFound() {
         We couldn't find the page you were looking for.
       </p>
       <p className="text-gray-600 mb-8">
-        Go back to the{" "}
+        Go back to the
         <Link href="/" className="text-purple-500 underline">
           homepage
         </Link>
