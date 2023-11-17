@@ -88,11 +88,11 @@ export default function Login() {
           className="w-full p-2 bg-purple-700 text-white rounded-md hover:bg-purple-800"
           onClick={handleLogin}
         >
-          Login
+          Login&quot;
         </button>
         {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
         <div className="mt-4 text-center text-sm">
-          Don't have an account?
+          Don't have an account?&quot;
           <Link href="/register" className="text-purple-700 hover:underline">
             Register
           </Link>
