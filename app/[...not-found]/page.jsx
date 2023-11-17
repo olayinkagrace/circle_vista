@@ -17,7 +17,7 @@ export default function NotFound() {
         
       </p>
       <Image
-        src={error}// Add the path to your custom 404 image
+        src={error}
         alt="404 Image"
         className="w-48 h-48 object-cover rounded-full shadow-md mb-8"
       />

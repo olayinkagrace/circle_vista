@@ -22,7 +22,7 @@ export default function Posts() {
         }
       } catch (error) {
         console.error('Error fetching user posts', error);
-        // Handle the error, e.g., display an error message to the user
+     
       } finally {
         setLoading(false);
       }
@@ -58,7 +58,10 @@ export default function Posts() {
             ))}
           </ul>
         ) : (
-          <p className="text-gray-800">No posts found for {username ? username : 'you'}</p>
+          <div className='flex justify-center items-center '>
+            <p className="text-gray-700 text-center self-center">No posts created by {username ? username : 'you'}</p>
+          </div>
+          
         )}
       </div>
     </main>

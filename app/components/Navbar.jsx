@@ -15,7 +15,7 @@ export default function Navbar() {
     <nav className="bg-purple-700 p-4 flex flex-col sm:flex-row items-center justify-between">
       {/* Logo for all screens */}
       <div className="flex items-center mb-4 sm:mb-0">
-        <a href="/" className="text-white text-lg font-bold hover:underline">
+        <a href="/" className="text-white text-lg font-bold hover:underline sm:block hidden" >
           CircleVista
         </a>
       </div>

@@ -55,7 +55,7 @@ export default function CreatePost() {
 
   return (
     <main className="bg-purple-500 h-screen flex items-center justify-center">
-      <form className="bg-white p-8 rounded-lg shadow-md">
+      <form className="bg-white p-8 rounded-lg shadow-md w-[90%]">
         <h1 className="text-2xl text-zinc-500 font-extrabold mb-4">
           What's on your mind?
         </h1>
