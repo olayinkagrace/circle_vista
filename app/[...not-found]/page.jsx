@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import error from "../../public/error.png"
+import error from "../../public/error.png";
 
 export default function NotFound() {
   return (
@@ -13,8 +13,9 @@ export default function NotFound() {
       </p>
       <p className="text-gray-600 mb-8">
         Go back to the{" "}
-        <Link href="/" className="text-purple-500 underline">homepage</Link>
-        
+        <Link href="/" className="text-purple-500 underline">
+          homepage
+        </Link>
       </p>
       <Image
         src={error}
@@ -23,10 +24,12 @@ export default function NotFound() {
       />
       <p className="text-gray-600">
         Need assistance? Contact our support team at{" "}
-        <a href="mailto:support@example.com" className="text-purple-500 underline">
+        <a
+          href="mailto:support@example.com"
+          className="text-purple-500 underline"
+        >
           circlevista@gmail.com
         </a>
-        
       </p>
     </main>
   );

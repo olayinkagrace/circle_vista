@@ -44,7 +44,9 @@ export default function Register() {
   return (
     <main className="bg-purple-500 h-screen flex items-center justify-center">
       <form className="bg-white p-8 rounded-lg shadow-md">
-        <h1 className="text-2xl text-zinc-500 font-extrabold mb-4">Create an account</h1>
+        <h1 className="text-2xl text-zinc-500 font-extrabold mb-4">
+          Create an account
+        </h1>
         <div className="flex items-center mb-4">
           <FaUser className="mr-2" />
           <input
